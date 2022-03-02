@@ -6,13 +6,14 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import { BrowserRouter as Router , Route, Switch, Redirect } from "react-router-dom";
 import Success from "./pages/Success";
+import { useSelector } from "react-redux";
 
 
 
 
 const App = () => {
 
-  const user = true;
+  const user = useSelector((state)=> state.user.currentUser);
   return (
     <Router>
       <Switch>

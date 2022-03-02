@@ -138,6 +138,7 @@ const SummeryButton = styled.button`
 const Cart = () => {
 
   const cart = useSelector(state=>state.cart)
+  
   const[stripeToken, setStripeToken] = useState(null)
   const history =  useHistory()
   const onToken = (token) =>{
@@ -158,6 +159,8 @@ const Cart = () => {
     stripeToken && makeRequest();
   },[stripeToken,cart.total,history])
 
+ console.log('cart:',cart)
+
   return (
     <Container>
       <Navbar />
@@ -168,7 +171,7 @@ const Cart = () => {
           <TopButton>CONTINUE SHOPPING</TopButton>
 
           <TopTexts>
-            <TopText>Shopping bag(2)</TopText>
+            <TopText>Shopping bag(0)</TopText>
             <TopText>Your WishList(0)</TopText>
           </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>

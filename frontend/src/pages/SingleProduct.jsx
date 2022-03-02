@@ -139,7 +139,6 @@ const SingleProduct = () => {
                 addProduct({ ...singleProduct , quantity , size , color })
             )
         }
- console.log("size:",size);
 
   return (
     <Container>

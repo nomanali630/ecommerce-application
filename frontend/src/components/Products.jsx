@@ -57,7 +57,8 @@ const Products = ({ cat, filters, sort }) => {
         );
       }
     }, [sort]);
-
+    console.log('double',products)
+    console.log('single',filteredProducts)
  
   return (
     <Container>
